@@ -17,7 +17,7 @@ const Login = () => {
       toast.error('Please fill all the fields');
     } else {
       try {
-        const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+        const response = await axios.post('https://client-side-gold.vercel.app/api/auth/login', { email, password });
         login(email, response.data.token);
         toast.success('Logged in successfully');
         navigate('/home');
